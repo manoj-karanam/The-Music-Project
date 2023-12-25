@@ -1,0 +1,64 @@
+body {
+  background-color: #fefbd8;
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+h1 {
+  font-size: 30px;
+  background-color: white;
+  width: 600px;
+  height: 75px;
+  border: 5px solid black;
+  margin-left: 30%;
+  padding: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.forms {
+  text-align: center;
+}
+
+.adjust-padding {
+  padding: 10px;
+}
+
+.class {
+  align-items: center;
+}/*# sourceMappingURL=forms1.css.map */
+
+.navbar {
+  overflow: hidden;
+  background-color: #333; /* Change the background color to your desired color */
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 0;
+  width: 100%;
+}
+
+/* Style for the navigation links */
+.navbar a {
+  float: left;
+  display: sticky;
+  color: white; /* Change the text color to your desired color */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Add some style when you hover over the navigation links */
+.navbar a:hover {
+  background-color: #ddd; /* Change the background color on hover */
+  color: black; /* Change the text color on hover */
+}
+
+/* Add some style to the active link (current page) */
+.navbar a.active {
+  background-color: #4CAF50; /* Change the background color for the active link */
+  color: white; /* Change the text color for the active link */
+}

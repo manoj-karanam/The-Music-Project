@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Explorer</title>
+
+    <style>
+        .navbar {
+  overflow: hidden;
+  background-color: #333; /* Change the background color to your desired color */
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 0;
+  width: 100%;
+}
+
+/* Style for the navigation links */
+.navbar a {
+  float: left;
+  display: sticky;
+  color: white; /* Change the text color to your desired color */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Add some style when you hover over the navigation links */
+.navbar a:hover {
+  background-color: #ddd; /* Change the background color on hover */
+  color: black; /* Change the text color on hover */
+}
+
+/* Add some style to the active link (current page) */
+.navbar a.active {
+  background-color: #4CAF50; /* Change the background color for the active link */
+  color: white; /* Change the text color for the active link */
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a ref="Index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="Services.html">Services</a>
+        <a  class="active" href="api_explore.html">API</a>
+      </div>
+    <br><br>
+    <h1>Music API</h1>
+    <div style="display: flex;">
+        <article style="padding-right: 2%;">
+            <input type="text" id="searchInput" placeholder="Search by job title">  
+        </article>
+        <aside>
+            <button onclick="search()">Search</button>
+        </aside>
+    </div>
+    <ul id="dataContainer"></ul>
+    
+    <script>
+        // Define a class to hold the data
+        class MusicInfo {
+            constructor(id, title, artist) {
+                this.id = id;
+                this.title = title;
+                this.artist = artist;
+            }
+        }
+
+        // Function to fetch data from the API and display it
+        async function fetchData() {
+            const url = 'https://deezerdevs-deezer.p.rapidapi.com/infos';
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '5566fbcc9dmsh61ca4ffc5feac2cp1c6e75jsn4cb84cb54bb7',
+                    'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+                }
+            };
+
+            try {
+                const response = await fetch(url, options);
+                const musicData = await response.json();
+                console.log(musicData);
+                return musicData.data.map(music => new MusicInfo(music.id, music.title, music.artist));
+               
+            } catch (error) {
+                console.error(error);
+                return [];
+            }
+        }
+
+        // Function to display data on the webpage
+        function displayData(data) {
+            const dataContainer = document.getElementById('dataContainer');
+            dataContainer.innerHTML = '';
+
+            if (data.length === 0) {
+                dataContainer.textContent = "No music available at the moment."
+                return;
+            }
+
+            data.forEach(music => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `ID: ${music.id}, Title: ${music.title}, Artist: ${music.artist}`;
+                dataContainer.appendChild(listItem);
+            });
+        }
+
+        function search() {
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput.value.toLowerCase();
+
+            if (!searchTerm.trim()) {
+                alert('Please enter a search term.');
+                return;
+            }
+
+            const found = music.some(music => music.artist.toLowerCase().includes(searchTerm));
+            alert(`Music of "${searchTerm}" ${found ? 'found' : 'not found'}.`);
+        }
+
+        let music = [];
+        fetchData()
+            .then(data => {
+                music = data;
+                displayData(music);
+            });
+    </script>
+</body>
+</html>

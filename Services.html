@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+<style>
+
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333; /* Change the background color to your desired color */
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 0;
+  width: 100%;
+}
+
+/* Style for the navigation links */
+.navbar a {
+  float: left;
+  display: sticky;
+  color: white; /* Change the text color to your desired color */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Add some style when you hover over the navigation links */
+.navbar a:hover {
+  background-color: #ddd; /* Change the background color on hover */
+  color: black; /* Change the text color on hover */
+}
+
+/* Add some style to the active link (current page) */
+.navbar a.active {
+  background-color: #4CAF50; /* Change the background color for the active link */
+  color: white; /* Change the text color for the active link */
+}
+.flex-container {
+    display: flex;
+    background-color: rgb(69, 72, 74);
+    padding: 5%
+      }
+
+.flex-container {
+    background-color: #f1f1f1;
+        margin: 5%;
+        /* padding: 10%; */
+        font-size: 15px;
+}
+
+#finalconentcontent{
+    padding: 2%;
+    color: rgb(9, 0, 0);
+    margin: 10%;
+    padding: 10%;
+    border: 10% solid green;
+
+}
+</style>
+
+<script src="Services.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="Index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Feedback.html">Feedback</a>
+        <a class="active" href="Services.html">Services</a>
+        <a href="api_explore.html">API</a>
+      </div>
+
+    <section class="flex-container">
+        <form id="checklist-Genre-Instruments">
+        <div class="genre">
+            <h1>
+                Genre
+            </h1>
+            
+            <label for="ClassicRock">
+                <input type="radio" id="ClassicRock" name="Genre" value="Classic Rock">
+                Classic Rock</label>
+            <br>
+
+            <label for="AlternateRock">
+                <input type="radio" id="AlternateRock" name="Genre" value="Alternate Rock">
+                Alternate Rock</label>
+            <br>
+
+            <label for="Blues">
+                <input type="radio" id="Blues" name="Genre" value="Blues">
+                Blues</label>
+            <br>
+
+            <label for="Pop">
+                <input type="radio" id="Pop" name="Genre" value="Pop">
+                Pop</label>
+            <br>
+
+            <label for="Jazz">
+                <input type="radio" id="Jazz" name="Genre" value="Jazz">
+                Jazz</label>
+            <br>
+
+            <label for="ClassicRock">
+                <input type="radio" id="ClassicRock" name="Genre" value="Country Music">
+                Country Music</label>
+            <br>
+        </div>
+        
+        <div class="genre">
+
+            <h1>
+                Instruments
+            </h1>
+
+            <label for="ElectricGuitar"><input type="checkbox" id="ElectricGuitar" name="Instruments" value="Electric Guitar">
+                Electric Guitar</label>
+            <br>
+
+            <label for="AcousticGuitar"><input type="checkbox" id="AcousticGuitar" name="Instruments" value="Acoustic Guitar">
+                Acoustic Guitar</label>
+            <br>
+
+            <label for="Blues"><input type="checkbox" id="BassGuitar" name="Instruments" value="Bass Guitar">
+                Bass Guitar</label>
+            <br>
+
+            <label for="AcousticDrums"><input type="checkbox" id="AcousticDrums" name="Instruments" value="Acoustic Drums">
+                Acoustic Drums</label>
+            <br>
+
+            <label for="Synth"><input type="checkbox" id="Synth" name="Instruments" value="Synth">
+                Synth</label>
+            <br>
+
+            <label for="GrandPiano"><input type="checkbox" id="GrandPiano" name="Instruments" value="Grand Piano">
+                Grand Piano</label>
+            <br>
+
+            <label for="Saxophone"><input type="checkbox" id="Saxophone" name="Instruments" value="Saxophone">
+                Saxophone</label>
+            <br>
+
+            <label for="BambooFlute">
+                <input type="checkbox" id="BambooFlute" name="Instruments" value="Bamboo Flute">
+                Bamboo Flute</label>
+            <br>
+
+            <label for="ClassicRock">
+                <input type="checkbox" id="Harmonica" name="Instruments" value="Harmonica">
+                Harmonica</label>
+            <br><br><br>
+
+            <label for="refsong">
+                Reference Music name <input type="textarea" id="refsong" required>
+            </label><br><br>
+
+            <label for="duration">
+                Duration in Minutes <input type="textarea" id="duration" required>
+            </label><br><br>
+
+            <label for="username">
+                Name <input type="textarea" id="username" required>
+            </label><br><br>
+
+            <label for="mail">
+                Email ID <input type="textarea" id="mail" required>
+            </label><br><br>
+
+            <input type="file" name="mp3file" accept=".mp3">
+            <input type="submit" value="Upload"><br><br>
+    
+            <label for="submit">
+                <input type="button" value="Submit" onclick="displayCheckedItems()">
+            </label>
+            
+            <p id="result"></p>
+           
+
+        </div>
+        </form>
+        
+        
+   
+        
+    </section>
+    <div id="displaycontent">
+        <h2>Checked Genre:</h2>
+        
+        <ul id="checked-items-Genre">
+            <!-- Checked items will be displayed here -->
+        </ul>
+
+        <h2>Checked Instruments</h2>
+
+        <ul id="checked-items-Instruments">
+            <!-- Checked items will be displayed here -->
+        </ul>
+
+        <p id="finalcontent"></p>
+
+    </div>    
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,124 @@
+/* Use the variables */
+body {
+  background-color: #fefbd8;
+}
+
+a {
+  color: black;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  font-style: italic;
+}
+
+p {
+  font-size: 17px;
+}
+
+#content {
+  text-align: center;
+  background-color: white;
+  width: 1000px;
+  height: 50px;
+  padding: 30px;
+  margin: 10px;
+  border: 5px solid green;
+  margin-left: 10%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #e6edf3;
+  padding: 10px;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+}
+
+.grid-item {
+  background-color: rgba(73, 41, 41, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+a.footercontent {
+  background-color: black;
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}/*# sourceMappingURL=index1.css.map */
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333; /* Change the background color to your desired color */
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 0;
+  width: 100%;
+}
+
+/* Style for the navigation links */
+.navbar a {
+  float: left;
+  display: sticky;
+  color: white; /* Change the text color to your desired color */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Add some style when you hover over the navigation links */
+.navbar a:hover {
+  background-color: #ddd; /* Change the background color on hover */
+  color: black; /* Change the text color on hover */
+}
+
+/* Add some style to the active link (current page) */
+.navbar a.active {
+  background-color: #4CAF50; /* Change the background color for the active link */
+  color: white; /* Change the text color for the active link */
+}
+
+/* Style for the image container */
+.image-container {
+      text-align: center;
+  }
+
+  /* Style for the label */
+.label {
+   display: block;
+   margin-top: 10px;
+   font-weight: bold;
+}
+
+.image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+      gap: 20px; /* Adjust the gap between images */
+  }
+
+  /* Style for each clickable image container */
+.image-container {
+      text-align: center;
+  }
+
+  /* Style for the label */
+.label {
+      display: block;
+      font-weight: bold;
+  }
+
+#footer{
+  text-align: center;
+  background-color: black;
+  color: white;
+}

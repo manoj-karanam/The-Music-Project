@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Practise</title>
+    <link rel="stylesheet" href="forms1.css">
+    
+</head>
+
+
+<header class="forms">
+  <h1>Please Fill out the below form, we will get back to you shortly</h1>
+  
+
+</header>
+
+<body class="forms">
+
+  <div class="navbar">
+    <a  href="Index.html">Home</a>
+    <a href="About.html">About</a>
+    <a class="active" href="Feedback.html">Feedback</a>
+    <a href="Services.html">Services</a>
+    <a href="api_explore.html">API</a>
+  </div>
+
+    
+    <form>
+
+      <section class="adjust-padding">
+        <label>Male</label>
+        <input type="radio" name="rdbtn"required>
+      </section>
+
+      <section class="adjust-padding">
+        <label>Female</label>
+        <input type="radio" name="rdbtn"required>
+      </section>
+
+      <section class="adjust-padding">
+        <label>Other</label>
+        <input type="radio" name="rdbtn"required>
+      </section>
+
+      
+      <section class="adjust-padding">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="First Name" required>
+      </section>
+
+     
+
+      <section class="adjust-padding">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+      </section>
+
+     
+
+      <section class="adjust-padding">
+        <label for="email">Email ID</label>
+        <input type="email" id="email" name="email" placeholder="Email ID" required>
+      </section>
+
+      
+
+      <section class="adjust-padding">
+      <label for="issue">Explain the issue</label>
+      <textarea type="text" id="issue" name="issue" rows="4" columns="50" placeholder="Please explain the issue here" required>
+      </textarea>
+      </section>
+
+     
+
+      <section class="adjust-padding">
+        <label for="phno">Phone Number</label>
+        <input type="tel" id="email" name="phno" placeholder="Phone Number" required>
+      </section>
+
+      
+
+      <section class="adjust-padding">
+        <label for="dt">Enter Date</label>
+        <input type="date" id="dt" name="dt" required>
+      </section>
+
+
+      
+      
+      <section class="adjust-padding">
+        <input class="button" type="reset">
+      
+        
+      
+     
+        <input class="button" type="submit">
+      </section>
+
+    </form>
+    
+</body>
+</html>
